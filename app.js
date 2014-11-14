@@ -1,6 +1,6 @@
 var express = require('express');
 var swig = require('swig');
-var store = require("./store");
+// var store = require("./store");
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');

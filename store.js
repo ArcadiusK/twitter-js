@@ -1,13 +1,17 @@
 var _ = require("underscore");
+// var io = require("socket.io");
 var data = [];
  
 module.exports = {
   push: function(name, text){
-  data.push({
+  var dataobj = {
     "name": name,
     "text": text,
     "id":data.length
-  })
+  };
+  data.push(dataobj);
+  return dataobj;
+  // io.sockets.emit("new_tweet", dataobj);
 },
   list: function(){
   return data;

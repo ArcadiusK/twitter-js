@@ -79,4 +79,24 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
   </body>
+
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+  // load the socket.io library above, the connect to the server
+  // because the socket.io server is being run on the same server as your 
+  // express instance, you can connect() without any additional information
+  var socket = io.connect(); // TIP: .connect with no args does auto-discovery
+ 
+  // when 'new_tweet' events are fired, take our fileobj object and do something with it
+  socket.on('new_tweet', function (new_tweet) { 
+   // console.log(new_tweet);
+   // alert('Refreshing... check the console...');
+    // new_tweet.tweet 
+    // add logic to load the new tweet
+ //   var addThisHTML = '"<div class="tweetbox">retro</div>"';
+  //  var listOfTweets = document.getElementByName("oneTweet");
+   // listOfTweets.innerHTML = listOfTweets.innerHTML + addThisHTML;
+    console.log("success");
+  }); 
+</script>
 </html>
