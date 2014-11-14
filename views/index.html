@@ -12,9 +12,9 @@
       -1 followers
     </div>
     <div class="col-md-9">
-    
+  <div id="listOfTweets">  
  {% for tweet in tweets %}
- <div class="oneTweet">
+ 
         <div class="tweetbox">
           <img src="http://lorempixel.com/48/48?{{ tweet.name }}"/>
           <div class="content">
@@ -22,8 +22,9 @@
             <div><a href="/users/{{ tweet.name }}/tweets/{{ tweet.id }}">{{tweet.text}}</a></div>
           </div>
         </div>
-        </div>
+        
       {% endfor %}
+          </div>
           </div>
   </div>
       {% if show_form %}

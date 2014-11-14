@@ -91,12 +91,18 @@
   socket.on('new_tweet', function (new_tweet) { 
    // console.log(new_tweet);
    // alert('Refreshing... check the console...');
-    // new_tweet.tweet 
     // add logic to load the new tweet
- //   var addThisHTML = '"<div class="tweetbox">retro</div>"';
-  //  var listOfTweets = document.getElementByName("oneTweet");
-   // listOfTweets.innerHTML = listOfTweets.innerHTML + addThisHTML;
-    console.log("success");
+    var addThisHTML = "<div class='tweetbox'>";
+    addThisHTML += "<img src='http://lorempixel.com/48/48?"+new_tweet.name+"'/>";
+    addThisHTML += "<div class='content'>";
+    addThisHTML += "<div class='by'><a href='/users/"+ new_tweet.name +"'>"+new_tweet.name +"</a></div>";
+    addThisHTML += "<div><a href='/users/"+ new_tweet.name +"/tweets/"+ new_tweet.id +"'>"+new_tweet.text+"</a></div>";
+    addThisHTML += "</div>";
+    addThisHTML += "</div>";
+    addThisHTML += "</div>";
+    var listOfTweets = document.getElementById("listOfTweets");
+    listOfTweets.innerHTML = listOfTweets.innerHTML + addThisHTML;
+    //console.log(addThisHTML);
   }); 
 </script>
 </html>
